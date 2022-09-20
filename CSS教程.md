@@ -494,7 +494,21 @@ align-content 取值
 
 ## 2.7 交叉轴对齐详解( align-items,align-content)
 
-### 2.7.1 垂直方向对齐
+### 2.7.1 主轴方向对齐
+
+- `Justify-content`
+
+  - `Flex-start`
+  - `Flex-end`
+  - `Space-around`
+  - `Space-between`
+  - `Space-evenly`
+
+  <img src="assets//image-20220920124202930.png" alt="image-20220920124202930"  />
+
+
+
+### 2.7.2 垂直方向对齐
 
 - `align-content`
   - `stretch` 默认
@@ -507,7 +521,7 @@ align-content 取值
 
 
 
-### 2.7.2 不加`flex-wrap:wrap`, `align-content`不生效, 当发生折行时，折行后的内容，紧贴着折行
+### 2.7.3 不加`flex-wrap:wrap`, `align-content`不生效, 当发生折行时，折行后的内容，紧贴着折行
 
 ```html
 <style>
@@ -536,7 +550,15 @@ align-content 取值
 </div>
 ```
 
-### 2.7.3 align-items 针对所在行对齐
+![image-20220920124746808](assets//image-20220920124746808.png)
+
+**子项不设置高度，align-content默认是stretch**
+
+![image-20220920125204021](assets//image-20220920125204021.png)
+
+![image-20220920125330323](assets//image-20220920125330323.png)
+
+### 2.7.4 align-items 针对所在行对齐
 
 - `align-items`
   - `stretch`(默认)
