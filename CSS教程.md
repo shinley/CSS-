@@ -570,7 +570,7 @@ align-content 取值
             height: 500px;
             background: skyblue;
             display: flex;
-            /* 当不折行的情况下，align-content不生效 */
+            /* 当不折行的情况下，子元素排在一行 */
             flex-wrap: wrap;
             align-items: flex-center;
 
@@ -596,7 +596,15 @@ align-content 取值
     </div>
 ```
 
-baseline 以小写字母`x`的底为底
+**不折行时， 子元素排在一行**
+
+![image-20220921085621197](assets//image-20220921085621197.png)
+
+**折行时，子元素在折行后的每一行居中**
+
+![image-20220921085703555](assets//image-20220921085703555.png)
+
+**baseline 以小写字母`x`的底为底**
 
 ```html
 <style>
