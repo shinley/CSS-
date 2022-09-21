@@ -519,10 +519,7 @@ align-content 取值
   - `space-between`
   - `space-evenly`
 
-
-
 ### 2.7.3 不加`flex-wrap:wrap`, `align-content`不生效, 当发生折行时，折行后的内容，紧贴着折行
-
 ```html
 <style>
     .main {
