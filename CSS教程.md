@@ -885,9 +885,13 @@ align-content 取值
 
 ## 2.12 flex-shrink收缩比例
 
-- flex-shrink 收缩比例，默认值是1， 表示flex容器空间不足时， 元素的收缩比例
+- flex-shrink 收缩比例，默认值是1，自动收缩成跟父元素相同。 表示flex容器空间不足时， 元素的收缩比例
+
+![image-20220924205644178](assets/image-20220924205644178.png)
 
 ### 2.12.1 单个子元素时
+
+收缩比例为0时， 不收缩，大于1时，收缩到跟父容器大小相同
 
 ```html
 <style>
@@ -899,6 +903,7 @@ align-content 取值
     }
 
     .main div {
+        /*宽度超出父容器*/
         width: 600px;
         height: 100px;
         background: pink;
@@ -914,6 +919,8 @@ align-content 取值
     <div>1</div>
 </div>
 ```
+
+![image-20220924205954246](assets/image-20220924205954246.png)
 
 ### 2.12.2 多个元素时
 
@@ -939,7 +946,7 @@ align-content 取值
         width: 400px;
         height: 100px;
         background: pink;
-        flex-shrink: 2;
+        flex-shrink: 1;
     }
 </style>
 
@@ -949,13 +956,26 @@ align-content 取值
 </div>
 ```
 
+第一种情况： flex-shrink 都是默认值 1
+
+- 超出宽度300 + 400 -500 = 200， 超出200
+
+- 按宽度， 第一块 300宽， 第二块400宽， 第一块占 3/7 * 200, 第二块占 4/7 * 200
+
+第二种情况： 第一个flex-shrink: 2, 第二个flex-shrink: 1
+
+- 超出宽度300 + 400 -500 = 200， 超出200
+- 按宽度，第一块300宽，但flex-shrink: 2 相当于600的宽，再加上第二块 400的宽， 相当于占了 6/10 * 200 分， 第二个占了4/10 * 200
+
 **经典例子**
 
 弹性布局，有三个子项， 如果第一个和最后一个子项的在布局方向上的宽或高固定并且`flex-shrink:0`, 中间的`flex-grow:1`, 则中间的占满剩余区域 。
 
 ## 2.13 flex-basis及flex缩写
 
-`flex-basis` 默认值是auto,指定了flex元素在主轴方向上的初始大小
+**`flex-basis` 默认值是auto,指定了flex元素在主轴方向上的初始大小**
+
+当主轴变成垂直方向时（flex-directaion: column）， flex-basis 就变成了高度
 
 ```html
 <style>
@@ -983,6 +1003,8 @@ align-content 取值
     </dim>
 </body>
 ```
+
+![image-20220924213030689](assets/image-20220924213030689.png)
 
 ### 2.13.1 flex简写
 
@@ -1035,6 +1057,10 @@ align-content 取值
         <div></div>
     </div>
 ```
+
+![image-20220924215006065](assets/image-20220924215006065.png)
+
+
 
 ## 2.14 两列与三列布局
 
