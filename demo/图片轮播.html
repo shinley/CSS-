@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .swiper-container {
+            position: relative;
+        }
+
+        .swiper-wrapper {
+            display: flex;
+        }
+
+        .swiper-slide {
+            width: 100%;
+            flex-shrink: 0;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+        }
+        .swiper-pagination {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .swiper-pagination div {
+            width: 8px;
+            height: 8px;
+            margin: 0 4px;
+            border-radius: 50%;
+            background: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"> <img src="https://pic2.iqiyipic.com/image/20220923/31/5e/a_100489277_m_601_m15_480_270.webp?caplist=webp,webp,avif" alt=""></div>
+            <div class="swiper-slide"><img src="https://pic7.iqiyipic.com/image/20220921/a4/39/a_100517544_m_601_m11_480_270.webp?caplist=webp,webp,avif" alt=""></div>
+            <div class="swiper-slide"><img src="https://pic7.iqiyipic.com/image/20220923/38/35/a_100517230_m_601_m14_480_270.webp?caplist=webp,webp,avif" alt=""></div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <!-- 如果需要导航按钮 -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</body>
+
+</html>

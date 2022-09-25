@@ -1107,6 +1107,8 @@ align-content 取值
     </div>
 ```
 
+![image-20220924221044372](assets/image-20220924221044372.png)
+
 ## 2.15 StickyFooter布局
 
 - main容器， 最小高度是可视区域，并且是弹性盒子
@@ -1217,7 +1219,7 @@ align-content 取值
         }
 
         .swiper-slide img {
-            width: 100%;
+            width: 100%;     /*此处让图片适应父容器*/
         }
         .swiper-pagination {
             position: absolute;
