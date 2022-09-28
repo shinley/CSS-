@@ -80,3 +80,6 @@
 
 ## 8. 显示网格与隐式网格
 
+- grid-auto-flow                             取值 为 row 和column, 在行和列上产生隐式网格
+- grid-auto-rows                            设置隐式网格的行高
+- grid-auto-columns                      设置隐式网格列宽
