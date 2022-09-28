@@ -80,6 +80,121 @@
 
 ## 8. 显示网格与隐式网格
 
+**指定在显示网格之外的隐式网格，如何排列及尺寸大小**
+
 - grid-auto-flow                             取值 为 row 和column, 在行和列上产生隐式网格
 - grid-auto-rows                            设置隐式网格的行高
 - grid-auto-columns                      设置隐式网格列宽
+
+![image-20220928195505990](assets/image-20220928195505990.png)
+
+**以上： 1，2，3 占的是显示网格， 4，5 占的是隐式网格**
+
+
+
+![image-20220928195746611](assets/image-20220928195746611.png)
+
+![image-20220928200458631](assets/image-20220928200458631.png)
+
+在列上产生隐式网格， 默认是行上
+
+![image-20220928200639914](assets/image-20220928200639914.png)
+
+**指定在列上产生隐式网格**
+
+![image-20220928200724900](assets/image-20220928200724900.png)
+
+
+
+**自适应列布局**
+
+![image-20220928201137351](assets/image-20220928201137351.png)
+
+**紧密排列**
+
+![image-20220928201409428](assets/image-20220928201409428.png)
+
+![image-20220928201511060](assets/image-20220928201511060.png)
+
+
+
+## 9. 基于线的元素放置
+
+- grid-column-start
+- grid-column-end
+- grid-row-start
+- grid-row-end
+
+### 8.1 显示line number
+
+![image-20220928202515135](assets/image-20220928202515135.png)
+
+### 8.2 指定基于线的停靠位置
+
+![image-20220928202706586](assets/image-20220928202706586.png)
+
+
+
+![image-20220928203102745](assets/image-20220928203102745.png)
+
+![image-20220928203329514](assets/image-20220928203329514.png)
+
+### 8.3 span的用法
+
+![image-20220928203558975](assets/image-20220928203558975.png)
+
+![image-20220928203654328](assets/image-20220928203654328.png)
+
+### 8.4 线的命名
+
+![image-20220928204335340](assets/image-20220928204335340.png)
+
+### 8.5 简写操作
+
+- grid-row
+- grid-column
+
+基于线对应位置的缩写方式，通过 `/` 分割
+
+![image-20220928204718191](assets/image-20220928204718191.png)
+
+### 8.6 grid-area 
+
+grid-row-start , grid-column-start, grid-row-end, grid-column-end 的缩写， 以及额外支持 grid-template-areas设置的网格名称
+
+![image-20220928205200466](assets/image-20220928205200466.png)
+
+### 8.7 子项的对齐方式
+
+- justify-self
+- align-self
+- place-self
+
+跟place-item用法相同， 只不过是操作指定子项
+
+![image-20220928205653906](assets/image-20220928205653906.png)
+
+## 10. repeat() 和 minmax()
+
+### 10.1 repeat() 简写
+
+![image-20220928210156626](assets/image-20220928210156626.png)
+
+
+
+### 10.2 auto-fill 自动生成网格
+
+![image-20220928210451501](assets/image-20220928210451501.png)
+
+### 10.3 minmax() 方法， 设置最小和最大值的范围
+
+![image-20220928211000963](assets/image-20220928211000963.png)
+
+![image-20220928211151295](assets/image-20220928211151295.png)
+
+### 10.4 根据分辨率，调整排列个数
+
+![image-20220928211813817](assets/image-20220928211813817.png)
+
+## 11. 比定位更方便的叠加布局
+
